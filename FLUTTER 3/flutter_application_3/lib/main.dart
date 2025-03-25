@@ -22,6 +22,21 @@ class _TelaCadastroState extends State<TelaCadastro> {
         title: Text("Create an account"),
         backgroundColor: Colors.blue,
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: const [
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text(
+                'Menu',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+            ListTile(leading: Icon(Icons.person), title: Text('Profile')),
+            ListTile(leading: Icon(Icons.settings), title: Text('Settings')),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
         child: Column(
